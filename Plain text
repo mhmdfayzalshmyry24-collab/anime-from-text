@@ -1,0 +1,13 @@
+anime-from-text/
+│
+├── index.html
+├── login.html
+├── register.html
+├── create-story.html
+├── my-stories.html
+│
+├── css/
+│   └── style.css
+│
+└── js/
+    └── app.js

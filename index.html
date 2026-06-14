@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anime From Text</title>
 
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+header{
+background:#4f46e5;
+padding:20px;
+font-size:30px;
+font-weight:bold;
+}
+
+.container{
+padding:25px;
+}
+
+textarea{
+width:90%;
+max-width:700px;
+height:180px;
+padding:12px;
+font-size:18px;
+border-radius:10px;
+}
+
+select{
+padding:10px;
+font-size:18px;
+border-radius:8px;
+margin-top:10px;
+}
+
+button{
+margin-top:20px;
+padding:14px 30px;
+font-size:20px;
+background:#f97316;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+#result{
+margin-top:25px;
+padding:15px;
+background:#1e293b;
+border-radius:10px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+🎌 Anime From Text
+</header>
+
+<div class="container">
+
+<h2>أنشئ قصة أنمي بالذكاء الاصطناعي</h2>
+
+<textarea id="idea"
+placeholder="اكتب فكرتك هنا..."></textarea>
+
+<br>
+
+<select id="style">
+<option>⚔️ أكشن</option>
+<option>🏰 مغامرة</option>
+<option>😂 كوميدي</option>
+<option>🪄 خيال</option>
+</select>
+
+<br>
+
+<button onclick="generateStory()">
+🚀 إنشاء القصة
+</button>
+
+<div id="result">
+اكتب فكرة ثم اضغط على "إنشاء القصة".
+</div>
+
+</div>
+
+<script>
+function generateStory(){
+
+let idea=document.getElementById("idea").value;
+let style=document.getElementById("style").value;
+
+if(idea.trim()==""){
+alert("الرجاء كتابة فكرة.");
+return;
+}
+
+document.getElementById("result").innerHTML=
+"<h2>📖 قصة جديدة</h2>"+
+"<p><b>النوع:</b> "+style+"</p>"+
+"<p><b>الفكرة:</b> "+idea+"</p>"+
+"<p>🚧 في الإصدار القادم سيتم توليد قصة كاملة بالذكاء الاصطناعي.</p>";
+
+}
+</script>
+
+</body>
+</html>
